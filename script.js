@@ -26,3 +26,4 @@ function getCard() {
 document.addEventListener('load', getCard())
 select.addEventListener('change', () => { console.log(select.value); })
 //select.addEventListener('change', getCard())
+asd
