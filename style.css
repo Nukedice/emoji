@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+    font-weight: 400;
+}
+
+.header {
+    max-width: 1440px;
+    height: 295px;
+    background: linear-gradient(to right, #087990, #055160);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: #fff;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 87px;
+    letter-spacing: 0em;
+}
+
+p {
+    color: #fff;
+}
+
+.input {
+    width: 820px;
+    height: 64px;
+    padding: 15px;
+    border: 1px solid #CED4DA;
+    display: block;
+    margin: -32px auto;
+    border-radius: 4px;
+    color: #ABB5BE;
+    font-size: 24px;
+    line-height: 21px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 51px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center
+}
+
+.footer div {
+    width: 986px;
+    color: #6C757D;
+    border-top: 1px solid #CED4DA;
+    padding-top: 13px;
+}
+
+.main {
+    height: 866px;
+}
+
+body {
+    background-color: #EDEEF3;
+}
+
+.card_block {
+    width: 986px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 80px auto;
+    gap: 19px;
+}
+
+.card {
+    width: 316px;
+    height: 184px;
+    background-color: white;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.emoji {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 18px;
+    font-size: 35px;
+    padding: 0;
+}
+.name {
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    text-decoration-line: underline;
+    margin-bottom: 12px;
+}
+.discription {
+    color: #3F444A;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
