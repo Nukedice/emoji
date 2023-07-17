@@ -4,26 +4,29 @@ const URL = 'http://api.codeoverdose.space';
 const emoji = '/api/emoji/v1';
 const find = '/api/emoji/v1/find/?query='; //?query=SEARCH_VALUE
 const select = document.getElementById('counter');
-function createCard(data) {
+function createCards(data) {
     cardBlock.insertAdjacentHTML('beforeend', `<div class="card">
         <div class="emoji">${data.symbol}</div>
         <span class="name">${data.title}</span>
         <span class="discription">${data.keywords}</span>
         </div>`)
 }
-function getCard() {
-    console.log(select.value)
+function removeCards () {
+while(cardBlock.lastChild) {
+    cardBlock.lastChild.remove()
+}
+}
+function getCards() {
+    removeCards();
     fetch(URL + emoji).then(function (response) {
         return response.json();
     }).then(function (data) {
         for (let i = 0; i < select.value; i++) {
-            createCard(data[i])
+            createCards(data[i])
         }
     }).catch(function (err) {
         console.log('Fetch Error :', err);
     })
 }
-document.addEventListener('load', getCard())
-select.addEventListener('change', () => { console.log(select.value); })
-//select.addEventListener('change', getCard())
-asd
+document.addEventListener('load', getCards())
+select.addEventListener('change', ()=> {getCards()}) //не работает без стрелочной функции, если просто вызвать getCards. Почему?
