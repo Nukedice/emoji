@@ -1,8 +1,8 @@
 const searchItem = document.querySelector('.input') //.value не вешается
 const cardBlock = document.querySelector('.card_block')
 const URL = 'http://api.codeoverdose.space';
-const emoji = '/api/emoji/v1';
-const find = '/api/emoji/v1/find/?query='; //?query=SEARCH_VALUE
+const EVERY_EMOJI = '/api/emoji/v1';
+const FIND_EMOJI = '/api/emoji/v1/find/?query='; //?query=SEARCH_VALUE
 const select = document.getElementById('counter');
 
 function createCards(data) {
@@ -23,7 +23,7 @@ function removeCards() {
 }
 function getCards() {
     removeCards();
-    fetch(URL + emoji).then(function (response) {
+    fetch(URL + EVERY_EMOJI).then(function (response) {
         return response.json();
     }).then(function (data) {
         for (let i = 0; i < select.value; i++) {
@@ -35,7 +35,7 @@ function getCards() {
 }
 function search() {
     removeCards();
-    fetch(URL + find + searchItem.value).then(function (response) {
+    fetch(URL + FIND_EMOJI + searchItem.value).then(function (response) {
         return response.json();
     }).then(function (data) {
         for (let i = 0; i < select.value; i++) {
