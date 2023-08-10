@@ -2,7 +2,7 @@ const searchItem = document.querySelector('.input') //.value не вешаетс
 const cardBlock = document.querySelector('.card_block')
 const URL = 'http://api.codeoverdose.space';
 const EVERY_EMOJI = '/api/emoji/v1';
-const FIND_EMOJI = '/api/emoji/v1/find/?query='; //?query=SEARCH_VALUE
+const FIND_EMOJI = '/api/emoji/v1/find/?query='; 
 const select = document.getElementById('counter');
 
 function createCards(data) {
@@ -46,5 +46,5 @@ function search() {
     })
 }
 document.addEventListener('load', getCards())
-select.addEventListener('change', () => { getCards() }) //не работает без стрелочной функции, если просто вызвать getCards. Почему?
-searchItem.addEventListener('input', () => { search() })
+select.addEventListener('change', getCards)
+searchItem.addEventListener('input', search)
